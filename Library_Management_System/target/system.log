@@ -1,0 +1,90 @@
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Logging initialized using 'class org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl' adapter.
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Logging initialized using 'class org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl' adapter.
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: PooledDataSource forcefully closed/removed all connections.
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: PooledDataSource forcefully closed/removed all connections.
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Class not found: org.jboss.vfs.VFS
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: JBoss 6 VFS API is not available in this environment.
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Class not found: org.jboss.vfs.VirtualFile
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Using VFS adapter org.apache.ibatis.io.DefaultVFS
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Find JAR URL: jar:file:/Users/chengjunhang/Code/Java/Java_Learn/Library_Management_System/target/Library_Management_System-1.0-jar-with-dependencies.jar!/com/library/mappers
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Inner URL: file:/Users/chengjunhang/Code/Java/Java_Learn/Library_Management_System/target/Library_Management_System-1.0-jar-with-dependencies.jar!/com/library/mappers
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Extracted JAR URL: file:/Users/chengjunhang/Code/Java/Java_Learn/Library_Management_System/target/Library_Management_System-1.0-jar-with-dependencies.jar
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Found JAR: file:/Users/chengjunhang/Code/Java/Java_Learn/Library_Management_System/target/Library_Management_System-1.0-jar-with-dependencies.jar
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Listing jar:file:/Users/chengjunhang/Code/Java/Java_Learn/Library_Management_System/target/Library_Management_System-1.0-jar-with-dependencies.jar!/com/library/mappers
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Found resource: /com/library/mappers/StudentMappers.class
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Found resource: /com/library/mappers/BookMappers.class
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Found resource: /com/library/mappers/BorrowMappers.class
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Checking to see if class com.library.mappers.StudentMappers matches criteria [is assignable to Object]
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Checking to see if class com.library.mappers.BookMappers matches criteria [is assignable to Object]
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Checking to see if class com.library.mappers.BorrowMappers matches criteria [is assignable to Object]
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Opening JDBC Connection
+二月 12, 2025 4:19:44 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] pragma busy_timeout=3000
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Created connection 1735934726.
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Setting autocommit to false on JDBC Connection [org.sqlite.jdbc4.JDBC4Connection@67784306]
+二月 12, 2025 4:19:44 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] begin;
+二月 12, 2025 4:19:44 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] CREATE TABLE IF NOT EXISTS BOOK (bid INTEGER NOT NULL CONSTRAINT BOOK_pk PRIMARY KEY, title TEXT NOT NULL, author TEXT NOT NULL, description TEXT, press TEXT NOT NULL);CREATE TABLE IF NOT EXISTS STUDENT (sid INTEGER NOT NULL CONSTRAINT STUDENT_pk PRIMARY KEY, name TEXT NOT NULL, age INTEGER NOT NULL, gender TEXT NOT NULL);CREATE TABLE IF NOT EXISTS BORROW (sid INTEGER NOT NULL CONSTRAINT BORROW_STUDENT_sid_fk REFERENCES STUDENT, bid INTEGER NOT NULL CONSTRAINT BORROW_BOOK_bid_fk REFERENCES BOOK, borrow_date TEXT NOT NULL, return_date TEXT NOT NULL);CREATE TABLE IF NOT EXISTS sqlite_master (type TEXT, name TEXT, tbl_name TEXT, rootpage INT, sql TEXT);CREATE TABLE IF NOT EXISTS sqlite_sequence (name, seq);
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Resetting autocommit to true on JDBC Connection [org.sqlite.jdbc4.JDBC4Connection@67784306]
+二月 12, 2025 4:19:44 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] commit;
+二月 12, 2025 4:19:44 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] begin;
+二月 12, 2025 4:19:44 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] commit;
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Closing JDBC Connection [org.sqlite.jdbc4.JDBC4Connection@67784306]
+二月 12, 2025 4:19:44 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Returned connection 1735934726 to pool.
+二月 12, 2025 4:19:44 上午 com.library.util.SqlUtil executeCreateTableSql
+警告: 执行创建表的 SQL 语句失败: [SQLITE_ERROR] SQL error or missing database (object name reserved for internal use: sqlite_master)
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Opening JDBC Connection
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Checked out connection 1735934726 from pool.
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Setting autocommit to false on JDBC Connection [org.sqlite.jdbc4.JDBC4Connection@67784306]
+二月 12, 2025 4:19:51 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] begin;
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: ==>  Preparing: select * from STUDENT
+二月 12, 2025 4:19:51 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] select * from STUDENT
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: ==> Parameters: 
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: <==      Total: 0
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Resetting autocommit to true on JDBC Connection [org.sqlite.jdbc4.JDBC4Connection@67784306]
+二月 12, 2025 4:19:51 上午 org.sqlite.util.LoggerFactory$JDKLogger trace
+非常详细: DriverManager [main] [SQLite EXEC] commit;
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Closing JDBC Connection [org.sqlite.jdbc4.JDBC4Connection@67784306]
+二月 12, 2025 4:19:51 上午 org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl debug
+详细: Returned connection 1735934726 to pool.

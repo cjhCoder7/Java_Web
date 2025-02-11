@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-02-08T19:22:28</date>
+  <millis>1739013748542</millis>
+  <sequence>0</sequence>
+  <logger>Main</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Hello, World!</message>
+</record>
+</log>
+二月 08, 2025 7:23:52 下午 Main main
+信息: Hello, World!

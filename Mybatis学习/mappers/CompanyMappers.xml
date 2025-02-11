@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="companyMappers">
+    <select id="selectAllCompany" resultType="Company"> select * from COMPANY </select>
+
+    <select id="selectCompanyById" parameterType="int" resultType="Company"> select * from COMPANY
+        where ID = #{id} </select>
+
+    <select id="selectCompanyById_hashmap" parameterType="int" resultType="hashmap"> select * from
+        COMPANY where ID = #{id} </select>
+
+    <select id="selectCompanyByIdAndAge" resultType="Company"> select * from COMPANY where ID =
+        #{id} and AGE = #{age} </select>
+
+    <!-- 转译字符的使用 -->
+    <select id="selectCompanyByIdLess" parameterType="int" resultType="Company"> select * from
+        COMPANY where ID &lt; #{id} </select>
+
+    <!-- 在返回的类中，如果类的属性名和数据库的列名不一致，可以使用resultMap来映射。 -->
+    <select id="selectCompanyByIdAndAge_resultmap" resultMap="test"> select * from COMPANY where ID
+        = #{id} and AGE = #{age} </select>
+    <resultMap id="test" type="Company">
+        <result property="name" column="companyName" />
+    </resultMap>
+
+    <insert id="insertCompany" parameterType="Company"> insert into COMPANY (ID, NAME, AGE, ADDRESS,
+        SALARY) values (#{id}, #{name}, #{age}, #{address}, #{salary}) </insert>
+
+    <!-- 自动递增主键 -->
+    <insert id="insertCompany_auto_increment" useGeneratedKeys="true"
+        keyProperty="id" keyColumn="id"> insert into COMPANY (NAME, AGE, ADDRESS, SALARY) values
+        (#{name}, #{age}, #{address}, #{salary}) </insert>
+
+    <!-- 更新操作 -->
+    <update id="updateCompanyById" parameterType="Company"> update COMPANY set NAME = #{name}, AGE =
+        #{age}, ADDRESS = #{address}, SALARY = #{salary} where ID = #{id} </update>
+
+    <!-- 删除操作 -->
+    <delete id="deleteCompanyById" parameterType="int"> delete from COMPANY where ID = #{id} </delete>
+</mapper>
